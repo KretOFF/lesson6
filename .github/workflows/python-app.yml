@@ -54,3 +54,13 @@ jobs:
       with:
         push: true
         tags: kretoff/flask_app_example:latest
+    - name: ls -a via ssh
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          cd kretov
+          docker-compose -- no-ansi pull
+          docker-compose -- no-ansi up -d
+        host: ${{ secrets.SSH_HOST }}
+        user: student
+        pass: ${{ secrets.SSH_PASSWORD}}
