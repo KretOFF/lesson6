@@ -1,0 +1,7 @@
+version: '3.3'
+
+Services:
+  flask app:
+    image: kretoff/flask_app_example
+    ports: 
+    - 5000:5000
