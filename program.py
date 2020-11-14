@@ -11,4 +11,4 @@ def v2():
 
 @app.route('/kretoff')
 def kretoff():
-    return 'Hello from lesson 6 by Kretov'
+    return 'Hello from CI with GitHub Action by Kretov'
